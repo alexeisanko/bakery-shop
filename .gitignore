@@ -1,0 +1,4 @@
+/venv/
+/.idea
+/config
+/bakery_shop/db.sqlite3
