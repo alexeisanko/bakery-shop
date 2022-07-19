@@ -44,4 +44,11 @@ class Order(models.Model):
     numbers_order = models.IntegerField(verbose_name='Номер заказа')
     date_order = models.DateTimeField(verbose_name="Время заказа", auto_now_add=True)
     id_user = models.ForeignKey(BakeryUser, on_delete=models.CASCADE, verbose_name='id Покупателя')
+    id_product = models.ForeignKey(
+        'cooking.Products',
+        on_delete=models.PROTECT,
+        verbose_name='Наименование продукта',
+        to_field='name'
+    )
+    count_product = models.IntegerField(verbose_name='Количество блюд')
 
