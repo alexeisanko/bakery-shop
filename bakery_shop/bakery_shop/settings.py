@@ -39,6 +39,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'account.apps.AccountConfig',
+    'cooking.apps.CookingConfig',
+    'ordering.apps.OrderingConfig',
+    'sweet_shop.apps.SweetShopConfig',
 ]
 
 MIDDLEWARE = [
