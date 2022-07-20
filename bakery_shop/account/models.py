@@ -10,15 +10,14 @@ class BakeryUser(AbstractUser):
     Класс для пользователей сайта. Дополнительно включает телефон и уровень лояльности
     """
 
-    username = None
-    phone_number_regex = RegexValidator(regex=r'^((\+7|7|8)+([0-9]){10})$')
-    number_phone = models.CharField(validators=phone_number_regex, verbose_name="Номер телефона")
+    username = models.CharField(max_length=15, verbose_name="Номер телефона", unique=True)
+    # phone_number_regex = RegexValidator(regex=r'^((\+7|7|8)+([0-9]){10})$')
+    # number_phone = models.CharField(validators=phone_number_regex, verbose_name="Номер телефона")
     id_loyalty = models.ForeignKey(
         'LoyaltyCard',
         on_delete=models.SET_NULL,
         null=True,
         blank=True,
-        to_field='level_loyalty'
     )
 
     class Meta:
@@ -48,7 +47,6 @@ class Order(models.Model):
         'cooking.Products',
         on_delete=models.PROTECT,
         verbose_name='Наименование продукта',
-        to_field='name'
     )
     count_product = models.IntegerField(verbose_name='Количество блюд')
 

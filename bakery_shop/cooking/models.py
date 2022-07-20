@@ -11,7 +11,6 @@ class Products(models.Model):
         'TypeProducts',
         on_delete=models.PROTECT,
         verbose_name='Тип блюда',
-        to_field='type_product'
     )
     cost = models.FloatField(verbose_name='Цена за ед.')
     description = models.TextField(verbose_name='Описание блюда', blank=True)
@@ -37,6 +36,6 @@ class Shops(models.Model):
 
 class CountProductsInShop(models.Model):
     """Хранит информацию о количество блюд в магазинах"""
-    shop = models.ForeignKey(Shops, on_delete=models.CASCADE, to_field='name_shop', verbose_name='Магазин')
-    product = models.ForeignKey(Shops, on_delete=models.CASCADE, to_field='name_shop', verbose_name='Блюдо')
+    shop = models.ForeignKey(Shops, on_delete=models.CASCADE, verbose_name='Магазин', related_name='shop')
+    product = models.ForeignKey(Shops, on_delete=models.CASCADE, verbose_name='Блюдо', related_name='product')
     count = models.IntegerField(verbose_name='Количество')
