@@ -22,7 +22,8 @@ class BakeryUser(AbstractUser):
 
     class Meta:
         db_table = 'users'
-        verbose_name = 'Пользователи'
+        verbose_name = 'Пользователь'
+        verbose_name_plural = 'Пользователи'
 
 
 class LoyaltyCard(models.Model):
@@ -34,7 +35,8 @@ class LoyaltyCard(models.Model):
     condition_to_next_level = models.IntegerField(blank=True, verbose_name="Необходимое условие для следующего уровня")
 
     class Meta:
-        verbose_name = 'Система лояльноси'
+        verbose_name = 'Система лояльности'
+        verbose_name_plural = 'Система лояльности'
 
 
 class Order(models.Model):
@@ -49,4 +51,8 @@ class Order(models.Model):
         verbose_name='Наименование продукта',
     )
     count_product = models.IntegerField(verbose_name='Количество блюд')
+
+    class Meta:
+        verbose_name = 'Заказ'
+        verbose_name_plural = 'Заказы'
 

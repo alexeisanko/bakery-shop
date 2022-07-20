@@ -2,3 +2,7 @@
 /.idea
 /config
 /bakery_shop/db.sqlite3
+/bakery_shop/account/migrations
+/bakery_shop/cooking/migrations
+/bakery_shop/sweet_shop/migrations
+/bakery_shop/ordering/migrations
