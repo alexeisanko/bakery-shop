@@ -31,7 +31,7 @@ class TypeProducts(models.Model):
     """Свойства определенной категории блюд"""
 
     type_product = models.CharField(max_length=30, verbose_name='Тип блюда', unique=True)
-    norm_count = models.IntegerField(verbose_name='Величина измерения')
+    norm_count = models.IntegerField(verbose_name='Величина измерения', default=1)
     unit = models.CharField(max_length=5, verbose_name='Вид измерения')
 
     def __str__(self):

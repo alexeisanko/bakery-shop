@@ -6,3 +6,8 @@
 /bakery_shop/cooking/migrations
 /bakery_shop/sweet_shop/migrations
 /bakery_shop/ordering/migrations
+/bakery_shop/account/__pycache__/
+/bakery_shop/bakery_shop/__pycache__/
+/bakery_shop/cooking/__pycache__/
+/bakery_shop/ordering/__pycache__/
+/bakery_shop/sweet_shop/__pycache__/

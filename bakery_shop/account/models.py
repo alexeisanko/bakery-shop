@@ -18,6 +18,7 @@ class BakeryUser(AbstractUser):
         on_delete=models.SET_NULL,
         null=True,
         blank=True,
+        verbose_name='Уровень лояльности'
     )
 
     def __str__(self):
@@ -64,4 +65,11 @@ class Order(models.Model):
     class Meta:
         verbose_name = 'Заказ'
         verbose_name_plural = 'Заказы'
+
+
+class AddressUser(models.Model):
+    """Модель для хранения адресов пользователя"""
+    address = models.CharField(max_length=50, verbose_name='Адрес')
+    id_user = models.ForeignKey(BakeryUser, on_delete=models.CASCADE, verbose_name='Пользователь')
+    id_shop = models.ForeignKey('cooking.Shops', on_delete=models.PROTECT, verbose_name='Магазин')
 
