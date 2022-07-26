@@ -1,0 +1,187 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+  letter-spacing: 0em;
+  font-size: 14px;
+}
+
+.btn {
+  padding: 10px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 10px;
+
+  background-color: #E3B975;
+  border: 2px solid transparent;
+  color: #fff;
+  transition: background-color 0.7s, border 0.7s, color 0.7s;
+  text-transform: uppercase;
+}
+.btn:hover {
+  background-color: #fff;
+  border: 2px solid #E3B975;
+  cursor: pointer;
+  color: #E3B975;
+}
+
+.modal {
+  opacity: 1;
+  visibility: visible;
+  position: fixed;
+  z-index: 199;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.modal--visible {
+  opacity: 1;
+  visibility: visible;
+}
+.modal__block {
+  background: url("../img/modal-bg.png") no-repeat center;
+  background-color: #121618;
+  padding: 40px 50px;
+  position: relative;
+}
+.modal__close {
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  width: 20px;
+  height: 20px;
+}
+.modal__close:hover {
+  cursor: pointer;
+  fill: #E3B975;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.form__title {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 37px;
+  text-align: center;
+  color: #fff;
+  margin-bottom: 35px;
+}
+.form__fio {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 500px;
+}
+.form__input {
+  margin-bottom: 25px;
+}
+.form input[type=checkbox] {
+  display: none;
+}
+.form__check {
+  margin-left: 8px;
+}
+.form label {
+  display: inline-block;
+  cursor: pointer;
+  position: relative;
+  padding-left: 25px;
+  margin-right: 0;
+  line-height: 18px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 20px;
+  color: rgba(255, 255, 255, 0.55);
+  margin-bottom: 25px;
+}
+.form label a {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 20px;
+  color: rgba(250, 197, 100, 0.7);
+  text-decoration: none;
+}
+.form label:before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: -8px;
+  width: 21px;
+  height: 20px;
+  bottom: 1px;
+  background: url("../img/checkbox-nonactive.svg") 0 0 no-repeat;
+}
+.form input[type=checkbox]:checked + label:before {
+  background: url("../img/checkbox-active.svg") 0 0 no-repeat;
+}
+
+.input {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.55);
+  padding: 10px 0;
+  cursor: pointer;
+  width: 500px;
+  color: #fff;
+}
+.input::-moz-placeholder {
+  font-style: italic;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  color: rgba(255, 255, 255, 0.55);
+}
+.input:-ms-input-placeholder {
+  font-style: italic;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  color: rgba(255, 255, 255, 0.55);
+}
+.input::placeholder {
+  font-style: italic;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  color: rgba(255, 255, 255, 0.55);
+}
+.input--little {
+  width: 200px;
+}
+
+.button {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 24px;
+  padding: 15px 50px;
+  border: 2px solid transparent;
+  transition: background-color 0.7s, border 0.7s, color 0.7s;
+}
+.button--primary {
+  background-color: #E3B975;
+  color: #fff;
+}
+.button:hover {
+  background-color: transparent;
+  border: 2px solid #E3B975;
+  cursor: pointer;
+  color: #E3B975;
+}/*# sourceMappingURL=style.css.map */

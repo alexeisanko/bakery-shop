@@ -1,1 +1,10 @@
 {% extends 'base.html' %}
+
+{% block content %}
+    <h3>Это аккаунт.</h3>
+    {% if request.user.is_authenticated %}
+        <h4>Привет {{ user.username }}</h4>
+    {% else %}
+        <h4>Привет незнакомец</h4>
+    {% endif %}
+{% endblock content %}
