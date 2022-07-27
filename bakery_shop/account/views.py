@@ -3,6 +3,7 @@ from django.contrib.auth.views import LoginView, LogoutView, PasswordResetComple
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth.decorators import login_required
 
+
 @login_required
 def account(request):
     return render(request, 'account/account.html')
@@ -14,4 +15,6 @@ class BakeryLogin(LoginView):
 
 class BakeryLogout(LoginRequiredMixin, LogoutView):
     pass
+
+
 

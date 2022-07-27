@@ -135,7 +135,7 @@ MEDIA_ROOT = 'bakery_shop/images'
 
 LOGIN_URL = '/account/login/'
 LOGIN_REDIRECT_URL = '/account/'
-LOGOUT_REDIRECT_URL = '/cooking/'
+LOGOUT_REDIRECT_URL = '/'
 PASSWORD_RESET_TIMEOUT_DAYS = 2
 
 AUTH_USER_MODEL = 'account.BakeryUser'
