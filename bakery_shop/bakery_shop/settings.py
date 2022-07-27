@@ -133,6 +133,9 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 MEDIA_ROOT = 'bakery_shop/images'
 
+LOGIN_URL = '/account/login/'
 LOGIN_REDIRECT_URL = '/account/'
+LOGOUT_REDIRECT_URL = '/cooking/'
+PASSWORD_RESET_TIMEOUT_DAYS = 2
 
 AUTH_USER_MODEL = 'account.BakeryUser'
