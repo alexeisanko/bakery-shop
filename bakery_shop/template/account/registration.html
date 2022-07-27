@@ -1,1 +1,29 @@
 {% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="modal">
+    <div class="modal__block">
+        <p>
+            <a href={% url 'cooking' %}>
+            <img src="{% static 'base/assets/img/close.svg' %}" alt="x" class="modal__close">
+            </a>
+        </p>
+        <form action="#" class="form modal__form">
+            <h2 class="form__title">Регистрация</h2>
+            <div class="form__fio">
+                <input required class="input form__input input--little" type="text" placeholder="Имя*">
+                <input required class="input form__input input--little" type="text" placeholder="Фамилия*">
+            </div>
+            <input required class="input form__input" type="tel" placeholder="Телефон*">
+            <input required class="input form__input" type="mail" placeholder="E-mail*">
+            <input required class="input form__input" type="password" placeholder="Пароль*">
+            <input required class="input form__input" type="password" placeholder="Повторите пароль*">
+            <div class="form__check">
+                <input required class="input form__input" type="checkbox" id="check">
+                <label for="check">Я согласен с <a href="#">политикой конфиденциальности</a></label>
+            </div>
+            <input required class="form__input form__btn button button--primary" type="submit" value="Зарегистрироваться">
+        </form>
+    </div>
+{% endblock content %}
