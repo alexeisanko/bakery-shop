@@ -27,7 +27,7 @@ class RegisterUserForm(forms.ModelForm):
         if password1 and password2 and password1 != password2:
             errors = {'password2': ValidationError('Пароли не совпадают', code='password_mismatch')}
             raise ValidationError(errors)
-        return password1
+
 
     def save(self, commit=True):
         user = super().save(commit=False)
