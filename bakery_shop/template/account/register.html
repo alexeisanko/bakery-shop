@@ -12,12 +12,11 @@
         <form action="#" class="form modal__form" method="post">
             <h2 class="form__title">Регистрация</h2>
 
-        {% for field in form %}
+        {% for field in user_form %}
             <div class="fieldWrapper">
                 <font color="#ff8c00">{{ field.errors | escape}}</font>
             </div>
         {% endfor %}
-
             <input required class="input form__input" type="tel" placeholder="Телефон*" name="username">
             <input required class="input form__input" type="password" placeholder="Пароль*" name="password1">
             <input required class="input form__input" type="password" placeholder="Повторите пароль*" name="password2">
@@ -28,6 +27,7 @@
             {% csrf_token %}
             <input required class="form__input form__btn button button--primary" type="submit" value="Зарегистрироваться">
         </form>
+        {% block activate %}{% endblock activate %}
     </div>
 </div>
 {% endblock content %}

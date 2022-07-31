@@ -133,9 +133,16 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 MEDIA_ROOT = 'bakery_shop/images'
 
+# config for redirect user
 LOGIN_URL = '/account/login/'
 LOGIN_REDIRECT_URL = '/account/'
 LOGOUT_REDIRECT_URL = '/'
 PASSWORD_RESET_TIMEOUT_DAYS = 2
 
 AUTH_USER_MODEL = 'account.BakeryUser'
+
+# config for send code to user
+API_SMS_LOGIN = os.getenv('API_SMS_LOGIN')
+API_SMS_TOKEN = os.getenv('API_SMS_TOKEN')
+SIGN_NAME = os.getenv('SIGN_NAME')
+TEXT_REGISTRATION_SMS = 'Добро пожаловать в Буфет в Обед!\nВаш проверочный код:'

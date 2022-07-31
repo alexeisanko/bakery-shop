@@ -1,0 +1,9 @@
+{% extends 'account/register.html' %}
+
+{% block activate %}
+    <form action="#" class="form modal__form" method="post">
+        {{ code_form.as_p }}
+        {% csrf_token %}
+        <input required class="form__input form__btn button button--primary" type="submit" value="Ввести Код">
+    </form>
+{% endblock activate %}

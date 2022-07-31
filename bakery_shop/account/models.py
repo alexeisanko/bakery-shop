@@ -1,6 +1,5 @@
 from django.db import models
 from django.contrib.auth.models import AbstractUser
-from django.core.validators import RegexValidator
 
 # Create your models here.
 
@@ -11,8 +10,6 @@ class BakeryUser(AbstractUser):
     """
 
     username = models.CharField(max_length=15, verbose_name="Номер телефона", unique=True)
-    # phone_number_regex = RegexValidator(regex=r'^((\+7|7|8)+([0-9]){10})$')
-    # number_phone = models.CharField(validators=phone_number_regex, verbose_name="Номер телефона")
     id_loyalty = models.ForeignKey(
         'LoyaltyCard',
         on_delete=models.SET_NULL,
@@ -20,6 +17,8 @@ class BakeryUser(AbstractUser):
         blank=True,
         verbose_name='Уровень лояльности'
     )
+    is_activated = models.BooleanField(verbose_name='Прошел активацию через смс?', default=False)
+    sms_code_activated = models.CharField(verbose_name='Код для регистрации', blank=True, max_length=4)
 
     def __str__(self):
         return self.username
